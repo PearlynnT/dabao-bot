@@ -33,7 +33,7 @@ def initialise(message):
 
 def title(message): 
     global poll_name
-    poll_name = message.text + "\n\n"
+    poll_name = message.text + "\t" + canteen + "\n\n"
     text = poll_name + get_stalls_text(canteen)
     keyboard = get_poll_keyboard()
     bot.send_message(message.chat.id, text, reply_markup=keyboard)
